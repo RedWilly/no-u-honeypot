@@ -10,17 +10,19 @@ Basically, an attacker will masquerade like a victim that has straight up rocks 
 
 > Found on [**Double entry point issues**](https://www.youtube.com/watch?v=aq0n0T0wAeQ) by [**@holajotola**](https://x.com/holajotola).
 
-Once the address is derived, consulting the block explorer will reveal an EOA that has a some ERC-20 balance, but no underlying ether which can be used to get the tokens out.
+Once the address is derived, consulting the block explorer will reveal an EOA that has a some ERC-20 balance, but no underlying ether to cover the cost of taking the tokens out.
 
-Would-be attakers, now lured in by the promise of free tokens, will attempt to send a transfer a little ether to cover the cost of exfiltrating the tokens via the public mempool.
+Would-be attakers, now incensed in by the promise of free tokens, will attempt to donate a little ether to cover the cost of exfiltrating the tokens via the public mempool.
 
 However, **the attacker is smarter than they are**.
 
-They are monitoring the public mempool, and upon detection of a pending donation, they'll immediately backrun with a `transfer`. This results in the would-be attacker's transaction to fail, the attacker to make off with the donation, and the ERC-20s remain inside the EOA for the next sucka.
+They're monitoring the mempool for pending donations and will immediately backrun the donation transaction with a transfer to their own address. This allows the attacker to make off with the donation and for the ERC-20s to remain inside the EOA to temp the next sucka.
 
 ## how to exploit the exploiters
 
 This whole attack works because no-one is going to go to the effort of writing a Flashbots transaction bundle to atomically transfer the ether and withdraw the tokens... _right_?
+
+Well, that's where [**no-u-honeypot**](https://github.com/cawfree/no-u-honeypot) comes in.
 
 ```shell
 git clone git@github.com:cawfree/no-u-honeypot.git
