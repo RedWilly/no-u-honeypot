@@ -12,9 +12,9 @@ Basically, there's this interesting honeypot where an attacker will masquerade l
 
 Once the address is derived, consulting the block explorer will reveal an EOA that has some ERC-20 balance, but no underlying ether to cover the cost of taking the tokens out.
 
-Would-be attakers, now incensed in by the promise of free tokens, will attempt to donate a little ether to cover the cost of exfiltrating the tokens via the public mempool.
+Would-be attackers, now incensed in by the promise of free tokens, will attempt to donate a little ether to cover the cost of exfiltrating the tokens via the public mempool.
 
-However, **the attacker is smarter than they are**.
+However, **the deployer is smarter than they are**.
 
 They're monitoring the mempool for pending donations and will immediately backrun the donation transaction with a transfer to their own address. This allows the attacker to make off with the donation and for the ERC-20s to remain inside the EOA to tempt the next sucka.
 
