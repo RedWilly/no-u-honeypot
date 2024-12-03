@@ -16,7 +16,7 @@ Would-be attakers, now incensed in by the promise of free tokens, will attempt t
 
 However, **the attacker is smarter than they are**.
 
-They're monitoring the mempool for pending donations and will immediately backrun the donation transaction with a transfer to their own address. This allows the attacker to make off with the donation and for the ERC-20s to remain inside the EOA to temp the next sucka.
+They're monitoring the mempool for pending donations and will immediately backrun the donation transaction with a transfer to their own address. This allows the attacker to make off with the donation and for the ERC-20s to remain inside the EOA to tempt the next sucka.
 
 ## how to exploit the exploiters
 
