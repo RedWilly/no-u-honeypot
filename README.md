@@ -1,7 +1,4 @@
 # no-u-honeypot
-Sweet, sweet, honey 🍯.
-
-## how the honeypot works
 
 There's this interesting attack designed to target unsophisticated crypto users.
 
@@ -19,9 +16,7 @@ Would-be attakers, now lured in by the promise of free tokens, will attempt to s
 
 However, **the attacker is smarter than they are**.
 
-They are monitoring the public mempool, and upon detection of a pending donation, they'll immediately backrun with a `transfer`. This results in the would-be attacker's transaction to fail.
-
-The tokens remain in the EOA for the next sucka.
+They are monitoring the public mempool, and upon detection of a pending donation, they'll immediately backrun with a `transfer`. This results in the would-be attacker's transaction to fail, the attacker to make off with the donation, and the ERC-20s remain inside the EOA for the next sucka.
 
 ## how to exploit the exploiters
 
