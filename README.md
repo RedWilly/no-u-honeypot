@@ -1,8 +1,8 @@
 # no-u-honeypot
 
-There's this interesting attack designed to target unsophisticated crypto users.
+## A little knowledge can be a dangerous thing.
 
-Basically, an attacker will masquerade like a victim that has straight up rocks for brains and shares their seed phrase on social media:
+Basically, there's this interesting honeypot where an attacker will masquerade like a victim that has straight up rocks for brains and shares their seed phrase on social media:
 
 <p align="center">
   <img src="public/honeypot.jpg" width="100%">
